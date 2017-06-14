@@ -24,6 +24,10 @@ def _parse_score(output):
     """Parse the score out of pylint's output as a float
     If the score is not found, return 0.0.
     """
+    # If output is empty that means the file is empty.
+    if output.strip() == "":
+        return 10.0
+
     for line in output.splitlines():
         if isinstance(line, six.binary_type):
             line = line.decode("utf-8")
