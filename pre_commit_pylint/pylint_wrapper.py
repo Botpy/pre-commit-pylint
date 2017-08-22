@@ -49,7 +49,7 @@ def check_score(argv=None):
         argv = sys.argv[1:]
 
     parser = argparse.ArgumentParser(__name__)
-    parser.add_argument('filenames', nargs='*', help='JavaScript filenames to check.')
+    parser.add_argument('filenames', nargs='*', help='filenames to check.')
 
     parser.add_argument("--limit", default=8.0, type=float,
                         help=('Score limit, files with a lower score will '
