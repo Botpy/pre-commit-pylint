@@ -1,12 +1,12 @@
 -   id: pylint-py3k
     name: Python 3 porting mode check
     description: This hook use pylint --py3k option to check Python 3 porting.
-    entry: python -m pre_commit_pylint.py3k
-    language: system
+    entry: ./python -m pre_commit_pylint.py3k
+    language: script
     files: \.py$
 -   id: pylint-score-limit
     name: Pylint Score Limit
     description: This hook runs pylint and checks it's score
     entry: python -m pre_commit_pylint.score_limit
-    language: system
+    language: script
     files: \.py$
