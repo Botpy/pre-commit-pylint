@@ -25,10 +25,4 @@ setup(
     install_requires=[
         'pylint',
     ],
-    entry_points={
-        'console_scripts': [
-            'pylint-score-limit = pre_commit_pylint.pylint_wrapper:check_score',
-            'pylint-py3k = pre_commit_pylint.pylint_wrapper:check_py3k',
-        ],
-    },
 )
